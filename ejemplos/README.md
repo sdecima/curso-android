@@ -3,4 +3,5 @@ Ejemplos
 
 [HolaMundo](HolaMundo)   
 [ActivityControlesBasicos](ActivityControlesBasicos)  
-[ActivityIntentos](ActivityIntentos)
+[ActivityIntentos](ActivityIntentos)  
+[ActivityIntentoCamara](ActivityIntentoCamara)  
