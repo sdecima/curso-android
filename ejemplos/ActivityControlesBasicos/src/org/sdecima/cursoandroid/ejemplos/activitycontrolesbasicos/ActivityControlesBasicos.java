@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class ActivityControlesBasicos extends Activity {
 
 	// Propiedad de la clase
 	TextView etiqueta;

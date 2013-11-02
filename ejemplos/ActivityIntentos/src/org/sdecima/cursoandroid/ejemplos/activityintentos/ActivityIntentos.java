@@ -6,7 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends Activity {
+public class ActivityIntentos extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
