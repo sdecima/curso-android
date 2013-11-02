@@ -5,3 +5,4 @@ Ejemplos
 [ActivityControlesBasicos](ActivityControlesBasicos)  
 [ActivityIntentos](ActivityIntentos)  
 [ActivityIntentoCamara](ActivityIntentoCamara)  
+[ActivityIntentoExplicito](ActivityIntentoExplicito)  
