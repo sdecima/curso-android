@@ -8,7 +8,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
 
-public class ActivityIntentoCamara extends Activity {
+public class ActivityIntentoCamaraSaveInstanceState extends Activity {
 	
 	ImageView imageView;
 	Bitmap imagen;
