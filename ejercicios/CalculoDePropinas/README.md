@@ -12,3 +12,4 @@ Mostrar el resultado en un Toast o en un TextView.
 Soluciones:
 -----------
 1. [CalculoDePropinas_1](CalculoDePropinas_1)
+2. [CalculoDePropinas_2](CalculoDePropinas_2)
