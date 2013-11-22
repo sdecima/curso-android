@@ -1,9 +1,10 @@
-package org.sdecima.cursoandroid.ejercicios.calculodepropinas_2;
+package org.sdecima.cursoandroid.ejercicios.calculodepropinas;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import org.sdecima.cursoandroid.ejercicios.calculodepropinas.R;
 
 public class ActivityResultado extends Activity {
 	@Override
