@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CalculoDePropinas</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="monto">Monto</string>
+    <string name="porcentajePropina">Porcentaje de Propina</string>
+    <string name="cantidadPersonas">Cantidad de Personas</string>
+    <string name="calcular">Calcular</string>
+    <string name="action_reset">Borrar valores</string>
+    <string name="limpiar">Limpiar</string>
+
+</resources>
