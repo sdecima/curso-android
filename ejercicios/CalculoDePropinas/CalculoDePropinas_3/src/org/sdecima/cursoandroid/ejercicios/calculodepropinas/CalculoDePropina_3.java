@@ -1,15 +1,15 @@
 package org.sdecima.cursoandroid.ejercicios.calculodepropinas;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import org.sdecima.cursoandroid.ejercicios.calculodepropinas.R;
 
 public class CalculoDePropina_3 extends Activity {
 	
@@ -25,6 +25,8 @@ public class CalculoDePropina_3 extends Activity {
 		etMonto = (EditText) findViewById(R.id.editTextMonto);
 		etPropina = (EditText) findViewById(R.id.editTextPropina);
 		etPersonas = (EditText) findViewById(R.id.editTextPersonas);
+		
+		registerForContextMenu(etMonto);
 		
 		inicializar();
 	}
@@ -129,5 +131,26 @@ public class CalculoDePropina_3 extends Activity {
 		Intent i = new Intent(this, ActivityResultado.class);
 		i.putExtra("mensaje", mensaje);
 		startActivity(i);
+	}
+	
+	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
+		switch(v.getId()) {
+		case R.id.editTextMonto:
+			getMenuInflater().inflate(R.menu.monto_context, menu);
+			break;
+		case R.id.editTextPersonas:
+			break;
+		}
+	};
+	
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		switch(item.getItemId()) {
+		case R.id.action_limpiar_monto:
+			etMonto.setText("0");
+			return true;
+		default:
+			return super.onContextItemSelected(item);
+		}
 	}
 }

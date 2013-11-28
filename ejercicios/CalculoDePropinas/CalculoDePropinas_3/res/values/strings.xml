@@ -9,5 +9,6 @@
     <string name="cantidadPersonas">Cantidad de Personas</string>
     <string name="calcular">Calcular</string>
     <string name="action_reset">Borrar valores</string>
+    <string name="limpiar">Limpiar</string>
 
 </resources>

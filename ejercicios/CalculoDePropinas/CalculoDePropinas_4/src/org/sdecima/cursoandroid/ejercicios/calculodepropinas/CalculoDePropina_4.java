@@ -3,9 +3,11 @@ package org.sdecima.cursoandroid.ejercicios.calculodepropinas;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -29,6 +31,8 @@ public class CalculoDePropina_4 extends Activity {
         seekBarPropina = (SeekBar) findViewById(R.id.seekBarPropina);
         textViewPropina = (TextView) findViewById(R.id.textViewPropina);
 		etPersonas = (EditText) findViewById(R.id.editTextPersonas);
+		
+		registerForContextMenu(etMonto);
 		
 		configurarSeekBar();
 		inicializar();
@@ -145,5 +149,26 @@ public class CalculoDePropina_4 extends Activity {
 		Intent i = new Intent(this, ActivityResultado.class);
 		i.putExtra("mensaje", mensaje);
 		startActivity(i);
+	}
+	
+	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
+		switch(v.getId()) {
+		case R.id.editTextMonto:
+			getMenuInflater().inflate(R.menu.monto_context, menu);
+			break;
+		case R.id.editTextPersonas:
+			break;
+		}
+	};
+	
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		switch(item.getItemId()) {
+		case R.id.action_limpiar_monto:
+			etMonto.setText("0");
+			return true;
+		default:
+			return super.onContextItemSelected(item);
+		}
 	}
 }
