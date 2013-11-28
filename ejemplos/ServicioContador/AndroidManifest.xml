@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="org.sdecima.cursoandroid.serviciocontador.ServicioContador"></service>
+        <service android:name="ServicioContador"></service>
     </application>
 
 </manifest>
