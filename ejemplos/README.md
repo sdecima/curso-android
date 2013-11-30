@@ -10,24 +10,28 @@ Ejemplo de uso de TextView, EditText, Button y onClick, Toast.
 
 [ActivityIntentos](ActivityIntentos)
 ------------------
-Ejemplo b·sico de Intentos implÌcitos de Web (ver una URL) y  telÈfono (discar).
+Ejemplo b√°sico de Intentos impl√≠citos de Web (ver una URL) y  tel√©fono (discar).
 
 [ActivityIntentos2](ActivityIntentos2)
 ------------------
-Ejemplo b·sico de Intentos implÌcitos de Web (ver una URL) y  telÈfono (llamar).
+Ejemplo b√°sico de Intentos impl√≠citos de Web (ver una URL) y  tel√©fono (llamar).
 
 [ActivityIntentoCamara](ActivityIntentoCamara)
 -----------------------
-Uso b·sico de la c·mara a travÈs de un Intento.
+Uso b√°sico de la c√°mara a trav√©s de un Intento.
 
 [ActivityIntentoCamaraSaveInstanceState](ActivityIntentoCamaraSaveInstanceState)
 -----------------------
-Uso b·sico de la c·mara a travÈs de un Intento, guardando el estado en onSaveInstanceState.
+Uso b√°sico de la c√°mara a trav√©s de un Intento, guardando el estado en onSaveInstanceState.
 
 [ActivityIntentoExplicito](ActivityIntentoExplicito)
 --------------------------
-Ejemplo b·sico de Intento ExplÌcito, es decir iniciar una Activity especÌfica de forma explÌcita a travÈs de la clase.
+Ejemplo b√°sico de Intento Expl√≠cito, es decir iniciar una Activity espec√≠fica de forma expl√≠cita a trav√©s de la clase.
 
 [ServicioContador](ServicioContador)
 --------------------------
-Ejemplo b·sico de servicio que implementa un simple contador.
+Ejemplo b√°sico de servicio que implementa un simple contador.
+
+[ServicioContadorBroadcast](ServicioContadorBroadcast)
+--------------------------
+Ejemplo b√°sico de servicio que implementa un simple contador.
