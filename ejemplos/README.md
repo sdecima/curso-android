@@ -43,3 +43,15 @@ Ejemplo de BroadcastReceiver que muestra un Toast cuando el teléfono está sona
 [BroadcastReceiverActivity](BroadcastReceiverActivity)
 --------------------------
 Ejemplo de BroadcastReceiver sin definirlo en el manifiesto, que muestra información del teléfono sólo cuando existe la Activity.
+
+[StorageSharedPreferences](StorageSharedPreferences)
+--------------------------
+Ejemplo de almacenamiento en SharedPreferences.
+
+[StorageInternal](StorageInternal)
+--------------------------
+Ejemplo de almacenamiento interno.
+
+[StorageExternal](StorageExternal)
+--------------------------
+Ejemplo de almacenamiento externo.
