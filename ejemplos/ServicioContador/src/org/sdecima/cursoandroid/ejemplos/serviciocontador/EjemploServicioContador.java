@@ -9,7 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
+public class EjemploServicioContador extends Activity {
 	
 	Button botonEmpezar;
 	Button botonTerminar;
@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 		botonEmpezar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this, ServicioContador.class);
+				Intent i = new Intent(EjemploServicioContador.this, ServicioContador.class);
 				startService(i);
 			}
 		});
@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 		botonTerminar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent i = new Intent(MainActivity.this, ServicioContador.class);
+				Intent i = new Intent(EjemploServicioContador.this, ServicioContador.class);
 				stopService(i);
 			}
 		});

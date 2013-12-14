@@ -34,4 +34,4 @@ Ejemplo básico de servicio que implementa un simple contador.
 
 [ServicioContadorBroadcast](ServicioContadorBroadcast)
 --------------------------
-Ejemplo básico de servicio que implementa un simple contador.
+Ejemplo básico de servicio que implementa un simple contador y utiliza mensages Broadcast para comunicarse con la Activity.
