@@ -55,3 +55,7 @@ Ejemplo de almacenamiento interno.
 [StorageExternal](StorageExternal)
 --------------------------
 Ejemplo de almacenamiento externo.
+
+[ContactosContentProvider](ContactosContentProvider)
+--------------------------
+Ejemplo de acceder a los contactos utilizando el ContentProvider de contactos.
