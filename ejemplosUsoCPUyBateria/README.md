@@ -21,3 +21,18 @@ Ejemplo que muestra el uso del Administrador de Alarmas.
 [EjecutarEnBoot](EjecutarEnBoot)
 -----------
 Ejemplo que muestra como ejecutar un BroadcastReceiver cuando termina de iniciar el sistema.
+
+[AndroidKeepAlive](AndroidKeepAlive)
+-----------
+Ejemplo que muestra como ejecutar una tarea repetitiva de forma eficiente.
+Para esto se programa un Servicio para ejecutarse a intervalos regulares.
+Además si se activa se configura para que al iniciar el dispositivo se reprograme el servicio.
+
+[AndroidKeepAlive2](AndroidKeepAlive2)
+-----------
+Similar al ejemplo anterior, pero configura las alarmas para despertar al dispositivo de ser necesario.
+Se utiliza un WakefulBroadcastReceiver.
+
+[AndroidKeepAlive3](AndroidKeepAlive3)
+-----------
+Igual al ejemplo anterior, pero programa los Wake Locks de forma explícita (sin utilizar WakefulBroadcastReceiver).
