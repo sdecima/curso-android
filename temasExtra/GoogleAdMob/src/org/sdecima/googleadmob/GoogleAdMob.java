@@ -1,15 +1,16 @@
-package org.polo.googleadmob;
+package org.sdecima.googleadmob;
 
 import com.google.ads.AdRequest;
 import com.google.ads.AdSize;
 import com.google.ads.AdView;
+import org.sdecima.googleadmob.R;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.widget.LinearLayout;
 
-public class MainActivity extends Activity {
+public class GoogleAdMob extends Activity {
 
 	private AdView adView;
 	
