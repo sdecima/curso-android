@@ -36,3 +36,16 @@ Se utiliza un WakefulBroadcastReceiver.
 [AndroidKeepAlive3](AndroidKeepAlive3)
 -----------
 Igual al ejemplo anterior, pero programa los Wake Locks de forma explícita (sin utilizar WakefulBroadcastReceiver).
+
+[DetectarConectividad](DetectarConectividad)
+-----------
+Ejemplo que descarga de la red sólo si hay una conexión disponible.
+Si no la hay registra un aviso para que el sistema levante la aplicación cuando haya conexión y en ese momento realiza la descarga.
+
+[DetectarConectividad2](DetectarConectividad2)
+-----------
+Ejemplo que descarga avanzado con óptimo uso de batería.
+Funciona similar al ejemplo anterior con las siguiente diferencias:  
+Sólo va a descargar por WiFi, de manera que cuando compruebe si hay conexión va a verificar sólo por WiFi.
+Si cuando esta bajando el archivo se corta la conexión, guarda el estado, registra para que el sistema le avise cuando haya otra conexión, y cierra el servicio.
+Cuando haya nuevamente, se verifica si es WiFi, y si es así se continúa la descarga.
