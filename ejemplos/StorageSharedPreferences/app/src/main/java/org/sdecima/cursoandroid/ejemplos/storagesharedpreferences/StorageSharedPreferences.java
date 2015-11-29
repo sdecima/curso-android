@@ -31,10 +31,10 @@ public class StorageSharedPreferences extends Activity {
     	
     	// Cada vez que se resume (muestra) la Activity, vamos a incrementar un contador
     	
-    	// Pido al sistema un SharedPreferences específica para esta Activity
+    	// Pido al sistema un SharedPreferences especÃ­fica para esta Activity
     	SharedPreferences pref = getPreferences(MODE_PRIVATE);
     	
-    	// Pido al sistema un SharedPreferences de nombre "miConfig", global a mi Aplicación
+    	// Pido al sistema un SharedPreferences de nombre "miConfig", global a mi AplicaciÃ³n
     	//SharedPreferences pref2 = getSharedPreferences("miConfig", MODE_PRIVATE);
     	
     	int cant = pref.getInt("cant_vistas", 0);
@@ -44,7 +44,7 @@ public class StorageSharedPreferences extends Activity {
     	SharedPreferences.Editor editor = pref.edit();
     	// luego hago las modificaciones que quiero con "putBoolean", "putInt", "putLong", "putFloat" o "putString"
     	editor.putInt("cant_vistas", cant);
-    	// por último llamo al método "commit" para hacer persistente los cambios
+    	// por Ãºltimo llamo al mÃ©todo "commit" para hacer persistente los cambios
     	editor.commit();
     	
     	// muestro el contador en pantalla
