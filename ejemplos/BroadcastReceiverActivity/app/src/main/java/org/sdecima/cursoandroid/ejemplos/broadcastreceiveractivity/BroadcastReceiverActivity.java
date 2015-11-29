@@ -1,11 +1,15 @@
 package org.sdecima.cursoandroid.ejemplos.broadcastreceiveractivity;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.widget.TextView;
@@ -22,8 +26,14 @@ public class BroadcastReceiverActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_broadcast_receiver);
-		
-        recibidas = (TextView)findViewById(R.id.textViewRecibidas);
+
+		// Verifico si el usuario diÃ³ permiso a la App a recibir informaciÃ³n sobre llamadas
+		if(ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+			// si no tiene el permiso, lo pido
+			ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, 1);
+		}
+
+		recibidas = (TextView)findViewById(R.id.textViewRecibidas);
         ultimo = (TextView)findViewById(R.id.textViewUltimoNumero);
         
         br = new BroadcastReceiver() {
@@ -32,20 +42,20 @@ public class BroadcastReceiverActivity extends Activity {
 				// Obtengo los datos extra del Intento
 		    	Bundle extras = intent.getExtras();
 				if (extras != null) {
-					// Pregunto el estado del teléfono, el cambio que generó este mensaje
+					// Pregunto el estado del telÃ©fono, el cambio que generÃ³ este mensaje
 					String estadoTelefono = extras.getString(TelephonyManager.EXTRA_STATE);
-					// Pregunto si el estado actual es que está sonando
+					// Pregunto si el estado actual es que estÃ¡ sonando
 					if (estadoTelefono.equals(TelephonyManager.EXTRA_STATE_RINGING)) {
-						// Si está sonando, muestro el número en un Toast
+						// Si estÃ¡ sonando, muestro el nÃºmero en un Toast
 						contador++;
 						String numero = extras
 								.getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
 						
 						recibidas.setText("Llamadas recibidas: "+contador);
-						ultimo.setText("Último número recibido: " + numero);
+						ultimo.setText("Ãºltimo nÃºmero recibido: " + numero);
 					}
 					// muestro el estado actual
-					Toast.makeText(getApplicationContext(), "Estado teléfono: " + estadoTelefono, Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Estado telÃ©fono: " + estadoTelefono, Toast.LENGTH_SHORT).show();
 				}
 			}
 		};
