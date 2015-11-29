@@ -46,10 +46,10 @@ public class ServicioBajarArchivo extends IntentService {
 		    }
 		    urlStream.close();
 			outputStream.close();
-			//mostrarMensaje("Se copió el archivo correctamente");
+			//mostrarMensaje("Se copiÃ³ el archivo correctamente");
 			notificarAlUsuario(strURL);
 		} catch (MalformedURLException e) {
-			mostrarMensaje("La dirección del archivo es inválida");
+			mostrarMensaje("La direcciÃ³n del archivo es invÃ¡lida");
 		} catch (IOException e) {
 			mostrarMensaje("Hubo un error al bajar el archivo: " + e.getMessage());
 		}
@@ -71,7 +71,7 @@ public class ServicioBajarArchivo extends IntentService {
     }
 
     /*
-     * Crear una notificación de Sistema
+     * Crear una notificaciï¿½n de Sistema
      */
 	void notificarAlUsuario(String url) {
 		// Obtener una referencia al NotificationManager
@@ -81,7 +81,7 @@ public class ServicioBajarArchivo extends IntentService {
 		
 		// Instanciar una Notification
 		int icon = R.drawable.ic_launcher;
-		CharSequence notifText = "Se terminó de bajar el archivo: " + url;
+		CharSequence notifText = "Se terminï¿½ de bajar el archivo: " + url;
 		long cuando = System.currentTimeMillis();
 		
 		// creo un PendingIntent
@@ -90,7 +90,7 @@ public class ServicioBajarArchivo extends IntentService {
 				notificationIntent, 0);
 
 		Notification notification = new NotificationCompat.Builder(this)
-			// titulo de la notificación
+			// titulo de la notificaciï¿½n
 			.setContentTitle("Terminado.")
 			// contenido
 			.setContentText(notifText)
@@ -98,9 +98,9 @@ public class ServicioBajarArchivo extends IntentService {
 			.setSmallIcon(icon)
 			// definir cuando aparece 
 			.setWhen(cuando)
-			// qué Intent envía cuando se toca la notificación
+			// quï¿½ Intent envï¿½a cuando se toca la notificaciï¿½n
 			.setContentIntent(contentIntent)
-			// autoCancel = se cancela automáticamente cuando se toca
+			// autoCancel = se cancela automï¿½ticamente cuando se toca
 			.setAutoCancel(true)
 			// texto que aparece en la barra de notificaciones cuando ocurre la misma
 			.setTicker("Archivo descargado.")

@@ -20,7 +20,7 @@ public class StorageInternal extends Activity {
 		
         campo = (EditText) findViewById(R.id.editText1);
         
-        // Si ya se ingresó una URL, se lee
+        // Si ya se ingresÃ³ una URL, se lee
         String url = getPreferences(MODE_PRIVATE).getString("url", "");
         campo.setText(url);
         
