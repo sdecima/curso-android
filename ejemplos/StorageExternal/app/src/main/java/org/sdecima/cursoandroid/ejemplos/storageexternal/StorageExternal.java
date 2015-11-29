@@ -64,9 +64,9 @@ public class StorageExternal extends Activity {
 	    	String estadoExterno = Environment.getExternalStorageState();
 	    	
 	    	if(estadoExterno.equals(Environment.MEDIA_MOUNTED)) {
-				publishProgress("Está montado, se va a escribir");
+				publishProgress("EstÃ¡ montado, se va a escribir");
 	    	} else if(estadoExterno.equals(Environment.MEDIA_MOUNTED_READ_ONLY)) {
-	    		publishProgress("Está montado sólo lectura");
+	    		publishProgress("EstÃ¡ montado sÃ³lo lectura");
 	    	} else {
 	    		publishProgress("Hay un problema con el externo: " + estadoExterno);
 	    	}
@@ -93,10 +93,10 @@ public class StorageExternal extends Activity {
 			    urlStream.close();
 				outputStream.close();
 				
-				publishProgress("Se copió el archivo correctamente");
+				publishProgress("Se copiï¿½ el archivo correctamente");
 				
 			} catch (MalformedURLException e) {
-				publishProgress("La dirección del archivo es inválida");
+				publishProgress("La direcciï¿½n del archivo es invï¿½lida");
 			} catch (IOException e) {
 				publishProgress("Hubo un error al bajar el archivo");
 				publishProgress(e.getMessage());
