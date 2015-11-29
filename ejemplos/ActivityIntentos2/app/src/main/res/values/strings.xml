@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="web">Web</string>
     <string name="telefono">Teléfono</string>
+    <string name="sin_permiso">El usuario no dió permiso a hacer llamadas telefónicas</string>
 
 </resources>
