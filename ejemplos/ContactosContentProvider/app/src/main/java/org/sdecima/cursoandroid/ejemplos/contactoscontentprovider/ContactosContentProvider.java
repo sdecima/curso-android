@@ -28,7 +28,7 @@ public class ContactosContentProvider extends Activity {
 	}
 
 	public void elegirContacto(View view) {
-		// Crea un Intent para elegir un contacto, según lo define el URI de
+		// Crea un Intent para elegir un contacto, segÃºn lo define el URI de
 		// Content Provider
 		Intent intent = new Intent(Intent.ACTION_PICK, Contacts.CONTENT_URI);
 		startActivityForResult(intent, PEDIDO_ELEGIR_CONTACTO);
@@ -47,7 +47,7 @@ public class ContactosContentProvider extends Activity {
 			Cursor cursor = getContentResolver().query(data.getData(),
 					new String[] { Contacts.DISPLAY_NAME }, null, null, null);
 
-			if (cursor.moveToFirst()) { // true si el cursor no está vacío
+			if (cursor.moveToFirst()) { // true si el cursor no estÃ¡ vacÃ­o
 				int columnIndex = cursor.getColumnIndex(Contacts.DISPLAY_NAME);
 				String nombre = cursor.getString(columnIndex);
 				// Muestro el nombre en pantalla
