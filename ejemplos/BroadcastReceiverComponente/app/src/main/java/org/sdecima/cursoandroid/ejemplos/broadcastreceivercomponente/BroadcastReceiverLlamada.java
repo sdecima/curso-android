@@ -14,18 +14,18 @@ public class BroadcastReceiverLlamada extends BroadcastReceiver {
 		// Obtengo los datos extra del Intento 
     	Bundle extras = intent.getExtras();
 		if (extras != null) {
-			// Pregunto el estado del telÈfono, el cambio que generÛ este mensaje
+			// Pregunto el estado del tel√©fono, el cambio que gener√≥ este mensaje
 			String estadoTelefono = extras.getString(TelephonyManager.EXTRA_STATE);
-			// Pregunto si el estado actual es que est· sonando
+			// Pregunto si el estado actual es que est√° sonando
 			if (estadoTelefono.equals(TelephonyManager.EXTRA_STATE_RINGING)) {
-				// Si est· sonando, muestro el n˙mero en un Toast
+				// Si est√° sonando, muestro el n√∫mero en un Toast
 				String numero = extras
 						.getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
 				
 		    	Toast.makeText(context, numero, Toast.LENGTH_SHORT).show();
 			} else {
-				// Si no est· sonando, muestro el estado actual en un Toast
-		    	Toast.makeText(context, "Estado telÈfono: " + estadoTelefono, Toast.LENGTH_SHORT).show();
+				// Si no est√° sonando, muestro el estado actual en un Toast
+		    	Toast.makeText(context, "Estado tel√©fono: " + estadoTelefono, Toast.LENGTH_SHORT).show();
 			}
 		}
 	}
