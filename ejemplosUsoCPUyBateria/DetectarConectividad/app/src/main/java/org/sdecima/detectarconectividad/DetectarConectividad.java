@@ -58,7 +58,7 @@ public class DetectarConectividad extends Activity {
 		if(hayConexion()) {
 			descargar();
 		} else {
-			Toast.makeText(this, "No hay conexión", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "No hay conexiÃ³n", Toast.LENGTH_SHORT).show();
 			registerReceiver(br, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 		}
 	}
