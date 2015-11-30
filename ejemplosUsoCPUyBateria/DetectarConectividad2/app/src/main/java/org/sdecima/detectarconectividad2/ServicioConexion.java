@@ -40,7 +40,7 @@ public class ServicioConexion extends Service {
 		if(Aplicacion.hayConexion(this)) {
 			descargar();
 		} else {
-			Toast.makeText(this, "No hay conexión", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "No hay conexiÃ³n", Toast.LENGTH_SHORT).show();
 			// habilito para recibir cambios de conectividad
 			Aplicacion.cambiarComponente(this, ReceiverConectividad.class, true);
 		}
@@ -118,7 +118,7 @@ public class ServicioConexion extends Service {
 					try {
 						tam = urlStream.read(buf);
 					} catch (IOException e) {
-						// no se pudo leer, probable falta de conexión
+						// no se pudo leer, probable falta de conexiÃ³n
 						if(Aplicacion.hayConexion(getApplicationContext())) {
 							// no fue problema de conexion
 							throw e;
@@ -126,7 +126,7 @@ public class ServicioConexion extends Service {
 						
 						// Programar detectar
 						Aplicacion.cambiarComponente(getApplicationContext(), ReceiverConectividad.class, true);
-						return "Se cortó la conexión";
+						return "Se cortÃ³ la conexiÃ³n";
 					}
 				}
 				
@@ -142,7 +142,7 @@ public class ServicioConexion extends Service {
 			} finally {
 				Editor editor = sp.edit();
 				if(leidos == tamArchivo || isCancelled()) {
-					// se termino de leer o se canceló, resetear para el ejemplo
+					// se termino de leer o se cancelÃ³, resetear para el ejemplo
 					editor.remove("total");
 					editor.remove("descargado");
 				} else {
