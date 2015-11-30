@@ -72,11 +72,11 @@ public class CalculoDePropina_4 extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.action_settings:
-			// opciÛn Settings
+			// opci√≥n Settings
 			break;
 
 		case R.id.action_reset:
-			// opciÛn Reset
+			// opci√≥n Reset
 			inicializar();
 			break;
 			
@@ -96,7 +96,7 @@ public class CalculoDePropina_4 extends Activity {
 	}
 	
 	/**
-	 * Lee el valor de un EditText, y valida si se ingresÛ un n˙mero valido y adem·s verifica que no sea negativo.
+	 * Lee el valor de un EditText, y valida si se ingres√≥ un n√∫mero valido y adem√°s verifica que no sea negativo.
 	 */
 	public double validarValor(EditText et, String texto) {
 		double valor = -1;
@@ -112,21 +112,21 @@ public class CalculoDePropina_4 extends Activity {
 	}
 	
 	/**
-	 * evento del botÛn a travÈs de la propiedad onClick
+	 * evento del bot√≥n a trav√©s de la propiedad onClick
 	 */
 	public void calcular(View view) {
-		// Obtengo el valor del EditText de Monto y muestro mensajes si es inv·lido
+		// Obtengo el valor del EditText de Monto y muestro mensajes si es inv√°lido
 		double dMonto = validarValor(etMonto, "Monto Total");
-		// Si es negativo dejo de calcular (ya se mostrÛ mensaje en validarValor)
+		// Si es negativo dejo de calcular (ya se mostr√≥ mensaje en validarValor)
 		if(dMonto < 0)
 			return;
 		
-		// Obtengo el valor del SeekBar de Propina y muestro mensajes si es inv·lido
+		// Obtengo el valor del SeekBar de Propina y muestro mensajes si es inv√°lido
 		double dPropina = seekBarPropina.getProgress();
 		
-		// Obtengo el valor del EditText de Personas y muestro mensajes si es inv·lido
+		// Obtengo el valor del EditText de Personas y muestro mensajes si es inv√°lido
 		double dPersonas = validarValor(etPersonas, "Personas");
-		// Si es negativo dejo de calcular (ya se mostrÛ mensaje en validarValor)
+		// Si es negativo dejo de calcular (ya se mostr√≥ mensaje en validarValor)
 		if(dPersonas < 0)
 			return;
 		
