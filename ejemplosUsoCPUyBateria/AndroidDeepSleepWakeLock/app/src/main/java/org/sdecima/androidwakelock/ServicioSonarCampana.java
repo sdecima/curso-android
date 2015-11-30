@@ -69,7 +69,7 @@ public class ServicioSonarCampana extends Service {
 			mediaPlayer.prepare();
 			mediaPlayer.seekTo(0);
 			mediaPlayer.start();
-			System.out.println("Se est· haciendo algo");
+			System.out.println("Se est√° haciendo algo");
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
