@@ -18,29 +18,29 @@ public class ReceiverAlarma extends BroadcastReceiver {
 		PendingIntent contentIntent = PendingIntent.getActivity(context, 0,
 				notificationIntent, 0);
 		
-		// Creo una URI de un recurso de sonido de la aplicación para la notificación 
+		// Creo una URI de un recurso de sonido de la aplicaciÃ³n para la notificaciÃ³n
 		Uri sonido = Uri.parse("android.resource://" + context.getPackageName() + "/raw/" + R.raw.alarma);
 		
-		// Creo la notificación
+		// Creo la notificaciÃ³n
 		Notification notification = new NotificationCompat.Builder(context)
 		// titulo
 			.setContentTitle("Alarma!!!")
 		// texto de contenido
-			.setContentText("Se activó la alarma...")
+			.setContentText("Se activÃ³ la alarma...")
 		// sonido a ejecutar cuando aparezca
 			.setSound(sonido)
 		// icono
 			.setSmallIcon(R.drawable.ic_launcher)
 		// Intento que va a mandar cuando se aprete
 			.setContentIntent(contentIntent)
-		// AutoCancel es para que desapazca la notificación cuando se aprete en ella
+		// AutoCancel es para que desapazca la notificaciÃ³n cuando se aprete en ella
 			.setAutoCancel(true)
 			.build();
 		
 		// Obtengo el Administrador de Notificaciones del Sistema
 		NotificationManager mNotificationManager =
 			    (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-		// Envío la notificación
+		// EnvÃ­o la notificaciÃ³n
 		mNotificationManager.notify(1, notification);
 	}
 
