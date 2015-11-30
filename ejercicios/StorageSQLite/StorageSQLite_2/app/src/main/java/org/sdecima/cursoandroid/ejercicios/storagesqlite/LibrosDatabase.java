@@ -60,7 +60,7 @@ public class LibrosDatabase extends SQLiteOpenHelper {
 	    if(desc != null)
 	    	cv.put(LibrosDatabase.DESCRIPCION, desc);
 	    
-	    // Filtro / WHERE para seleccionar qué modificar
+	    // Filtro / WHERE para seleccionar quÃ© modificar
 	    String clausulaWhere = LibrosDatabase.ID+"=?";
 	    String[] argumentosWhere = new String[] { String.valueOf(id) };
 		
@@ -75,7 +75,7 @@ public class LibrosDatabase extends SQLiteOpenHelper {
 	public int borrar(long id) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		
-		// Filtro / WHERE para seleccionar qué borrar
+		// Filtro / WHERE para seleccionar quÃ© borrar
 	    String clausulaWhere = LibrosDatabase.ID+"=?";
 	    String[] argumentosWhere = new String[] { String.valueOf(id) };
 	    
@@ -92,7 +92,7 @@ public class LibrosDatabase extends SQLiteOpenHelper {
 	    String columnas[] = {LibrosDatabase.ID, LibrosDatabase.ISBN,
 	    		LibrosDatabase.TITULO, LibrosDatabase.DESCRIPCION};
 	    
-		// Filtro / WHERE para seleccionar qué consultar
+		// Filtro / WHERE para seleccionar quÃ© consultar
 	    String clausulaWhere = LibrosDatabase.TITULO+" LIKE ?";
 	    String[] argumentosWhere = new String[] { "%" + t + "%" };
 	    
