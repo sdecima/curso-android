@@ -3,9 +3,6 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
     <permission android:name="org.sdecima.cursoandroid.ejercicios.libros.provider.permiso"></permission>
     <uses-permission android:name="org.sdecima.cursoandroid.ejercicios.libros.provider.permiso"/>
     
